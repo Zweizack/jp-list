@@ -2,4 +2,4 @@
 
 - I made such a design last year, I started but did not finish it.
 
-<img src="jp-list.png">
+<img src="https://raw.githubusercontent.com/Zweizack/jp-list/main/jp-list.png">
