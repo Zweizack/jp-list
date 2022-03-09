@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>#</title>
+  <meta charset="UTF-8">
+  <link rel="icon" href="https://cdn0.iconfinder.com/data/icons/fantasy/512/Fantasy_Potion.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+    html, body
+    {
+      height: 100%;
+      /*background-color: #014490;*/
+      /* https://thumbs.gfycat.com/BigImmediateIraniangroundjay-size_restricted.gif */
+      /* https://giffiles.alphacoders.com/211/211931.gif */
+      /* https://i.pinimg.com/originals/08/eb/a1/08eba1de6100c1f367c847c512ba0ad4.gif */
+      background: url('https://giffiles.alphacoders.com/211/211931.gif') no-repeat center center fixed;
+      font-family: 'Kanit', sans-serif;
+      text-shadow: 0 0 3px #d8277c;
+    }
+    ::selection
+    {
+      color: #fdf0d5;
+      background: #d8277c;
+    }
+    .color1
+    {
+      color: #fdf0d5 !important;
+      background-color: #3e259a; /* #014490 */
+      border: 2px solid #fdf0d5;
+    }
+    .color2
+    {
+      color: #fdf0d5 !important;
+      background-color: #163844; /* #780000 */
+      box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+      -webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+    }
+    .bitcoinpotion
+    {
+      right: 6px;
+      bottom: 6px;
+      width: 50px;
+      position: fixed;
+    }
+    li::before
+    {
+      content: '\27A4';
+      margin-right: 12px;
+      color: #fff;
+    }
+    /* Default toast style */
+    .toastContain
+    {
+      top: 17px;
+      right: 33px;
+      width: 300px;
+      position: fixed;
+    }
+    .toast
+    {
+      color: #fff;
+      opacity: 0;
+      min-height: 30px;
+      padding: 5px;
+      border: 1px solid #3e259a;
+      margin-top: -42px;
+      background-color: #d8277c;
+      box-shadow: 0 0 3px #fff;
+      text-align: center;
+      line-height: 30px;
+      transform: scale(0.95) translateY(50px);
+      transition:
+        margin-top 0.7s,
+        transform 0.7s,
+        opacity 0.7s;
+    }
+    .toast.open
+    {
+      margin-top: 10px;
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="h-100 d-flex justify-content-center align-items-center">
+    <div class="container d-flex flex-column">
+      <div class="card p-1 border-secondary">
+        <div class="card-body d-flex align-items-center rounded color2">
+          <img src="https://i.gifer.com/origin/85/85d449996b927eeabef8557052900df7_w200.gif" width="30">
+          <span class="ml-2 mr-2">SERVERS</span>
+          <!-- 服務器 -->
+        </div>
+      </div>
+      <br>
+      <!--
+      <button onclick="toast('A toast!')">Call Toast</button>
+      <button onclick="toast('A toast that lasts a little longer', 4000)">Long Toast</button>
+      <button onclick="toast('This is a serious toast!!', 'default', 'critical')">Styled Toast</button>
+      <button onclick="toast('One!!');toast('Two!!');toast('Three!!');">Multi-Toast</button>
+      -->
+      <ul class="list-group card p-1 border-secondary">
+        <li class="list-group-item d-flex justify-content-between align-items-center color2">
+          <div class="mr-auto">www.4hou.com</div>
+          <div class="ml-1 mr-1">
+            <button type="button" class="btn color1" onclick="toast('ACTIVE')">CHECK</button>
+          </div>
+          <div class="ml-1 mr-1">
+            <button type="button" class="btn color1">Φ</button>
+          </div>
+          <div class="ml-1 mr-1">
+            <button type="button" class="btn color1">Ψ</button>
+          </div>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center color2">
+          <div class="mr-auto">www.4hou.com</div>
+          <div class="ml-1 mr-1">
+            <button type="button" class="btn color1">CHECK</button>
+          </div>
+          <div class="ml-1 mr-1">
+            <button type="button" class="btn color1">Φ</button>
+          </div>
+          <div class="ml-1 mr-1">
+            <button type="button" class="btn color1">Ψ</button>
+          </div>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center color2">
+          <div class="mr-auto">www.4hou.com</div>
+          <div class="ml-1 mr-1">
+            <button type="button" class="btn color1">CHECK</button>
+          </div>
+          <div class="ml-1 mr-1">
+            <button type="button" class="btn color1">Φ</button>
+          </div>
+          <div class="ml-1 mr-1">
+            <button type="button" class="btn color1">Ψ</button>
+          </div>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center color2">
+          <div class="mr-auto">www.4hou.com</div>
+          <div class="ml-1 mr-1">
+            <button type="button" class="btn color1">CHECK</button>
+          </div>
+          <div class="ml-1 mr-1">
+            <button type="button" class="btn color1">Φ</button>
+          </div>
+          <div class="ml-1 mr-1">
+            <button type="button" class="btn color1">Ψ</button>
+          </div>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center color2">
+          <div class="mr-auto">www.4hou.com</div>
+          <div class="ml-1 mr-1">
+            <button type="button" class="btn color1">CHECK</button>
+          </div>
+          <div class="ml-1 mr-1">
+            <button type="button" class="btn color1">Φ</button>
+          </div>
+          <div class="ml-1 mr-1">
+            <button type="button" class="btn color1">Ψ</button>
+          </div>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center color2">
+          <div class="mr-auto">www.4hou.com</div>
+          <div class="ml-1 mr-1">
+            <button type="button" class="btn color1">CHECK</button>
+          </div>
+          <div class="ml-1 mr-1">
+            <button type="button" class="btn color1">Φ</button>
+          </div>
+          <div class="ml-1 mr-1">
+            <button type="button" class="btn color1">Ψ</button>
+          </div>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center color2">
+          <div class="mr-auto">www.4hou.com</div>
+          <div class="ml-1 mr-1">
+            <button type="button" class="btn color1">CHECK</button>
+          </div>
+          <div class="ml-1 mr-1">
+            <button type="button" class="btn color1">Φ</button>
+          </div>
+          <div class="ml-1 mr-1">
+            <button type="button" class="btn color1">Ψ</button>
+          </div>
+        </li>
+      </ul>
+      <div class="text-right text-white">0x7E6</div>
+    </div>
+  </div>
+  <img src="bitcoinpotion.gif" class="bitcoinpotion">
+  <script>
+    const transitionLength = 700;
+
+    let toastContain = document.createElement('div');
+    toastContain.classList.add('toastContain');
+    document.body.appendChild(toastContain);
+
+    function toast(str, time, addClass = 'default') {
+    if (!time || time === 'default') {
+      time = 2000;
+    }
+    let toastEl = document.createElement('div');
+    toastEl.classList.add('toast', addClass);
+    toastEl.innerText = str;
+    toastContain.prepend(toastEl);
+    setTimeout(() => toastEl.classList.add('open'));
+    setTimeout(
+      () => toastEl.classList.remove('open'),
+      time
+    );
+    setTimeout(
+      () => toastContain.removeChild(toastEl),
+      time + transitionLength
+    );
+    }
+  </script>
+</body>
+</html>
